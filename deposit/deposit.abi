@@ -1,0 +1,41 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Sep 27 10:27:18 2018",
+    "version": "eosio::abi/1.0",
+    "structs": [
+        {
+            "name": "deposit_record",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "payer",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "int64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [],
+    "tables": [
+        {
+            "name": "deposit",
+            "type": "deposit_record",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}
