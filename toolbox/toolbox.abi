@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Sep 26 11:26:04 2018",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Sep 27 14:49:25 2018",
     "version": "eosio::abi/1.0",
     "structs": [
         {
@@ -7,7 +7,7 @@
             "base": "",
             "fields": [
                 {
-                    "name": "user",
+                    "name": "to",
                     "type": "name"
                 },
                 {

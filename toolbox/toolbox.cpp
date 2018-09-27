@@ -9,7 +9,9 @@ class toolbox : public eosio::contract {
         toolbox( account_name self )
         :contract(self){}
         [[eosio::action]]
-        void promote( account_name user, string memo ) {
+        void promote( account_name to, string memo ) {
+            eosio_assert( is_account( to ), "to account does not exist");
+            require_recipient(to);
         }
 };
 

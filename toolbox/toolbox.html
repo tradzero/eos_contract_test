@@ -14,22 +14,29 @@
 
 <script>
     function test() {
-        scatter.getIdentity().then(function (res) {
-            console.log(res);
+        var network = {
+            blockchain:'eos',
+            host: 'jungle.cryptolions.io',
+            port: 18888,
+            chainId: "038f4b0fc8ff18a4f0842a8f0564611f6e96e8535901dd45e43ac8691a1c4dca"
+        }
+        var account;
+
+        scatter.getIdentity({
+            accounts: [network]
+        }).then(function (res) {
+            account = res.accounts[0].name;   
         }).catch(err => {
             if (err.type == "locked") {
                 console.log('need unlock');
             }
             console.log(err);
         });
-        var network = {
-            host: 'jungle.cryptolions.io',
-            port: 18888,
-            chainId: "038f4b0fc8ff18a4f0842a8f0564611f6e96e8535901dd45e43ac8691a1c4dca"
-        }
         eos = scatter.eos(network, Eos);
         eos.contract('eostradzero').then(function (contract) {
-            contract.promote('tradzero', 'testtest').then(function (res) {
+            contract.promote('tradzero', 'testtest', {
+                authorization: account
+            }).then(function (res) {
                 console.log(res);
             }).catch(function (err) {
                 console.log(err);
