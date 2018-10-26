@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Sep 27 14:49:25 2018",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Fri Oct 26 11:11:20 2018",
     "version": "eosio::abi/1.0",
     "structs": [
         {
@@ -15,13 +15,31 @@
                     "type": "string"
                 }
             ]
+        },
+        {
+            "name": "promotebatch",
+            "base": "",
+            "fields": [
+                {
+                    "name": "users",
+                    "type": "name[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
         }
     ],
-    "types": [],
     "actions": [
         {
             "name": "promote",
             "type": "promote",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "promotebatch",
+            "type": "promotebatch",
             "ricardian_contract": ""
         }
     ],
