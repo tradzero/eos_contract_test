@@ -1,0 +1,31 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Dec 13 12:00:36 2018",
+    "version": "eosio::abi/1.0",
+    "structs": [
+        {
+            "name": "receipt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "receipt",
+            "type": "receipt",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}
