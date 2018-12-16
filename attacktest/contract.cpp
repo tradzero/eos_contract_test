@@ -2,6 +2,7 @@
 
 void test::transfer(account_name from, account_name to, asset quantity, string memo)
 {
+    assert_action();
     string send_memo = "pass test";
     action(permission_level{ _self, N(active) }, _self, N(receipt),
                 make_tuple(from, send_memo)).send();

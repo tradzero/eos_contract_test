@@ -20,10 +20,12 @@ class test : public contract {
             char tx[tx_size];
             auto read_size = read_transaction(tx, tx_size);
             eosio_assert( tx_size == read_size, "read_transaction failed");
-            auto trx = eosio::unpack<transaction>( tx, read_size );
+            auto trx = unpack<transaction>( tx, read_size );
             action first_action = trx.actions.front();
             string action_name = name{first_action.name}.to_string();
             string _account_name = name{first_action.account}.to_string();
-            eosio_assert(first_action.name == N(transfer) && first_action.account == _code, "wrong transaction");
+            print("action size: ", trx.actions.size(), " ");
+            print(action_name, " ", _account_name);
+            // eosio_assert(trx.actions.size() == 1, "no allow contract action");
         }
 };
