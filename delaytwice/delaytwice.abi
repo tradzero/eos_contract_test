@@ -1,0 +1,46 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Fri Dec 28 15:42:22 2018",
+    "version": "eosio::abi/1.0",
+    "structs": [
+        {
+            "name": "delay",
+            "base": "",
+            "fields": [
+                {
+                    "name": "time",
+                    "type": "int32"
+                }
+            ]
+        },
+        {
+            "name": "receipt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tapos_block_num",
+                    "type": "int32"
+                },
+                {
+                    "name": "tapos_block_prefix",
+                    "type": "int32"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "delay",
+            "type": "delay",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "receipt",
+            "type": "receipt",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}
