@@ -1,0 +1,69 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue Jan  8 16:45:17 2019",
+    "version": "eosio::abi/1.1",
+    "structs": [
+        {
+            "name": "cleanup",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "getsecond",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "init",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "second",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "second_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "cleanup",
+            "type": "cleanup",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "getsecond",
+            "type": "getsecond",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "init",
+            "type": "init",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "second",
+            "type": "second",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": [],
+    "abi_extensions": []
+}
