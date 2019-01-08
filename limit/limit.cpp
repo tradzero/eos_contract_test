@@ -14,7 +14,7 @@ extern "C" {
 
         auto transfer_args = unpack_action_data<eosio::token::transfer_args>();
         uint64_t transfer_amount = transfer_args.quantity.amount;
-        eosio_assert( transfer_amount <= max_amount, "Your transfer amount is too large" );
+        eosio_assert( transfer_amount <= max_amount, "Your transfer amount is too large " );
       }
    }
 }
